@@ -8,14 +8,26 @@
 
 config_version=4
 
-_global_script_classes=[  ]
+_global_script_classes=[ {
+"base": "Node",
+"class": "Inventory",
+"language": "GDScript",
+"path": "res://Player/Inventory.gd"
+}, {
+"base": "Button",
+"class": "InventoryButton",
+"language": "GDScript",
+"path": "res://UI/InventoryButton.gd"
+} ]
 _global_script_class_icons={
-
+"Inventory": "",
+"InventoryButton": ""
 }
 
 [application]
 
 config/name="Oneida_Culture"
+run/main_scene="res://Game.tscn"
 config/icon="res://icon.png"
 
 [rendering]
