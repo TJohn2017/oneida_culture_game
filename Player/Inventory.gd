@@ -8,6 +8,7 @@ var contents = []
 signal new_item
 onready var inv_node = get_node("/root/Game/UI/InventoryButtons")
 	
+# Set up signals
 func _ready():
 	var err = connect("new_item", inv_node, "_on_item_added")
 	if err != 0:
@@ -21,7 +22,6 @@ func add_item(item):
 	button.icon = load("res://assets/icon.png")
 	if inv_node != null:
 		emit_signal("new_item", button)
-	
 	
 # Removes an item from the user's inventory
 func remove_item(item):

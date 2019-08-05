@@ -3,7 +3,7 @@ extends Button
 class_name InventoryButton
 
 # Variables containing info about the associated item
-#var has_item = false
+# var has_item = false
 var contained_item: Node
 
 # prepares button for interaction

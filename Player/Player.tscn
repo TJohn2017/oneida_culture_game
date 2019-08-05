@@ -1,11 +1,21 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=19 format=2]
 
 [ext_resource path="res://Player/Player.gd" type="Script" id=1]
-[ext_resource path="res://assets/wolf_assets/Wolf Idle 1.png" type="Texture" id=2]
-[ext_resource path="res://assets/wolf_assets/Wolf Idle 2.png" type="Texture" id=3]
-[ext_resource path="res://assets/wolf_assets/Wolf Run 1.png" type="Texture" id=4]
-[ext_resource path="res://assets/wolf_assets/Wolf Run 2.png" type="Texture" id=5]
-[ext_resource path="res://assets/wolf_assets/Wolf Run 3.png" type="Texture" id=6]
+[ext_resource path="res://assets/wolf_assets/Wolf Idle Left 1.png" type="Texture" id=2]
+[ext_resource path="res://assets/wolf_assets/Wolf Idle Left 2.png" type="Texture" id=3]
+[ext_resource path="res://assets/wolf_assets/Wolf Run Right 1.png" type="Texture" id=4]
+[ext_resource path="res://assets/wolf_assets/Wolf Run Right 2.png" type="Texture" id=5]
+[ext_resource path="res://assets/wolf_assets/Wolf Run Right 3.png" type="Texture" id=6]
+[ext_resource path="res://assets/wolf_assets/Wolf Run Forward 1.png" type="Texture" id=7]
+[ext_resource path="res://assets/wolf_assets/Wolf Run Forward 2.png" type="Texture" id=8]
+[ext_resource path="res://assets/wolf_assets/Wolf Run Forward 3.png" type="Texture" id=9]
+[ext_resource path="res://assets/wolf_assets/Wolf Idle Forward 1.png" type="Texture" id=10]
+[ext_resource path="res://assets/wolf_assets/Wolf Idle Forward 2.png" type="Texture" id=11]
+[ext_resource path="res://assets/wolf_assets/Wolf Run Left 1.png" type="Texture" id=12]
+[ext_resource path="res://assets/wolf_assets/Wolf Run Left 2.png" type="Texture" id=13]
+[ext_resource path="res://assets/wolf_assets/Wolf Run Left 3.png" type="Texture" id=14]
+[ext_resource path="res://assets/wolf_assets/Wolf Idle Right 1.png" type="Texture" id=15]
+[ext_resource path="res://assets/wolf_assets/Wolf Idle Right 2.png" type="Texture" id=16]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 11.5411, 19.269 )
@@ -14,17 +24,36 @@ extents = Vector2( 11.5411, 19.269 )
 animations = [ {
 "frames": [ ExtResource( 2 ), ExtResource( 3 ) ],
 "loop": true,
-"name": "Idle",
+"name": "IdleLeft",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 4 ), ExtResource( 5 ), ExtResource( 6 ) ],
 "loop": true,
+"name": "RunningRight",
+"speed": 10.0
+}, {
+"frames": [ ExtResource( 7 ), ExtResource( 8 ), ExtResource( 9 ) ],
+"loop": true,
 "name": "RunningDown",
 "speed": 10.0
+}, {
+"frames": [ ExtResource( 10 ), ExtResource( 11 ) ],
+"loop": true,
+"name": "IdleForward",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 12 ), ExtResource( 13 ), ExtResource( 14 ) ],
+"loop": true,
+"name": "RunningLeft",
+"speed": 10.0
+}, {
+"frames": [ ExtResource( 15 ), ExtResource( 16 ) ],
+"loop": true,
+"name": "IdleRight",
+"speed": 5.0
 } ]
 
 [node name="Player" type="KinematicBody2D"]
-editor/display_folded = true
 script = ExtResource( 1 )
 __meta__ = {
 "_edit_group_": true
